@@ -1,1 +1,27 @@
-<h1>Maintenance...</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Page</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            // Check the referrer
+            var referrer = document.referrer;
+            var githubHost = "github.marcokrooss.de";
+            var linkedinHost = "linkedin.marcokrooss.de";
+
+            // If the referrer is github.marcokrooss.de, redirect to github.com/MarcoKrooss
+            if (referrer.includes(githubHost)) {
+                window.location.href = "https://github.com/MarcoKrooss";
+            } else if (referrer.includes(linkedinHost)) {
+                window.location.href = "https://linkedin.com/in/marcokrooss"
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+    <p>If you are not redirected automatically, <a href="https://github.com/MarcoKrooss">click here</a>.</p>
+</body>
+</html>
