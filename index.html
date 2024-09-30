@@ -3,25 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect Page</title>
-    <script type="text/javascript">
-        window.onload = function() {
-            // Check the referrer
-            var referrer = document.referrer;
-            var githubHost = "github.marcokrooss.de";
-            var linkedinHost = "linkedin.marcokrooss.de";
+    <title>Website Under Maintenance</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-            // If the referrer is github.marcokrooss.de, redirect to github.com/MarcoKrooss
-            if (referrer.includes(githubHost)) {
-                window.location.href = "https://github.com/MarcoKrooss";
-            } else if (referrer.includes(linkedinHost)) {
-                window.location.href = "https://linkedin.com/in/marcokrooss"
-            }
-        };
-    </script>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        #countdown {
+            font-size: 1.5em;
+            color: #FF6347;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .contact {
+            margin-top: 40px;
+            font-size: 1em;
+        }
+
+        .contact a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 0.8em;
+            color: #999;
+        }
+    </style>
 </head>
 <body>
-    <h1>Redirecting...</h1>
-    <p>If you are not redirected automatically, <a href="https://github.com/MarcoKrooss">click here</a>.</p>
+
+    <div class="container">
+        <h1>We'll be back soon!</h1>
+        <p>Our website is currently undergoing scheduled maintenance.<br>
+        Please check back in a little while.</p>
+
+        <div id="countdown">Time reamining: 1 Month</div>
+
+        <div class="contact">
+            <p>If you need assistance, feel free to <a href="mailto:marco.krooss@web.de">contact us</a>.</p>
+        </div>
+    </div>
+
+    <footer>&copy; 2024 Marco Krooß</footer>
+
 </body>
 </html>
